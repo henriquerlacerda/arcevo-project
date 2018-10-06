@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainApplication" minHeight="578.0" minWidth="925.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainScreen">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="New Movie" />
+                  <Menu mnemonicParsing="false" text="List of Movies">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                     </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Edit Movie" />
+                  <MenuItem mnemonicParsing="false" text="Delete Movie" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <AnchorPane minHeight="578.0" minWidth="130.0" style="-fx-background-color: black;" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <VBox prefWidth="130.0">
+               <children>
+                  <ImageView fx:id="newMovie" fitHeight="127.0" fitWidth="128.0" onMouseClicked="#newMovie" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/newIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="187.0" fitWidth="128.0" onMouseClicked="#seeListMovies" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/listIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="135.0" fitWidth="128.0" onMouseClicked="#editMovieList" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/editIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
