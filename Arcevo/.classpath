@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/henri/Desktop/TCS/eclipse-workspace/Arcevo/src/jsoup-1.6.0.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="main/java/" kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/henri/Documents/Eclipse/arcevo-project/jsoup-1.6.0/jsoup-1.6.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

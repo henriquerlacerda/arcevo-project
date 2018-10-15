@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="resultsBox" alignment="CENTER" minHeight="300.0" minWidth="600.0" style="-fx-background-color: #888888;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ResultsPanel">
+   <children>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="We found these results, which one would you like to add?" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</VBox>
