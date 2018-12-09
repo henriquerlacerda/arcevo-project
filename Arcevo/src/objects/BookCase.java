@@ -1,16 +1,27 @@
 package objects;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Bookcase {
+public class BookCase {
 
 	private List<Movie> bookcase;
+	private String name;
 
-	public Bookcase() {
-		
+	public BookCase(String name) {
+		this.name = name;
+		bookcase = new ArrayList<Movie>();
 	}
 	
-	public Bookcase(List<Movie> bookcase) {
+	public String getName() {
+		return this.name;
+	}
+	
+	public void setName(String newName) {
+		this.name = newName;
+	}
+	
+	public BookCase(List<Movie> bookcase) {
 		super();
 		this.bookcase = bookcase;
 	}
@@ -31,7 +42,7 @@ public class Bookcase {
 		this.bookcase.remove(movie);
 	}
 	
-	public void bookcaseLength(Bookcase bookcase) {
+	public void bookcaseLength(BookCase bookcase) {
 		System.out.println(this.bookcase.size());
 	}
 }

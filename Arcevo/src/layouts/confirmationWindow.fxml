@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="notificationWindow" alignment="CENTER" maxHeight="125.0" maxWidth="253.0" minHeight="124.0" minWidth="253.0" spacing="20.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ConfirmationWindow">
+   <children>
+      <Label fx:id="notificationBox" text="Label" />
+      <Button fx:id="okButton" mnemonicParsing="false" onAction="#okClicked" prefHeight="25.0" prefWidth="71.0" text="Ok" />
+   </children>
+</VBox>

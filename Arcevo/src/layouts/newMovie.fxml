@@ -13,16 +13,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox fx:id="addMovie" alignment="CENTER" minHeight="578.0" minWidth="783.0" style="-fx-background-color: #888888;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewMovie">
+<VBox fx:id="addMovie" alignment="CENTER" minHeight="578.0" minWidth="823.0" spacing="30.0" style="-fx-background-color: #888888;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewMovie">
    <children>
       <HBox fx:id="topBox" alignment="TOP_CENTER" minHeight="314.0" minWidth="788.0">
          <children>
             <ImageView fx:id="cover" fitHeight="314.0" fitWidth="223.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" minHeight="205.0" minWidth="745.0">
+      <HBox alignment="CENTER" minHeight="205.0" minWidth="745.0" prefHeight="280.0" prefWidth="788.0">
          <children>
-            <GridPane minHeight="205.0" minWidth="514.0">
+            <GridPane minHeight="110.0" minWidth="777.0">
                <columnConstraints>
                   <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
@@ -31,8 +31,8 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="82.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="39.0" vgrow="ALWAYS" />
                </rowConstraints>
                <children>
                   <Text fill="#fcfcfc" strokeType="OUTSIDE" strokeWidth="0.0" text="Movie Title">
@@ -55,7 +55,20 @@
                         <Font name="Baskerville Old Face" size="24.0" />
                      </font>
                   </Text>
-                  <HBox alignment="CENTER" minHeight="80.0" minWidth="448.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <HBox alignment="CENTER" minHeight="100.0" minWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField fx:id="name" alignment="CENTER" onKeyPressed="#searchAction" promptText="type a movie title" />
+                        <Button mnemonicParsing="false" onAction="#searchMovie" text="Search Movie">
+                           <font>
+                              <Font name="Baskerville Old Face" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="year" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="location" alignment="CENTER" promptText="type the shell number/name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextArea fx:id="synopsis" minHeight="85.0" minWidth="257.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <HBox alignment="CENTER" minHeight="43.0" minWidth="243.0" prefHeight="152.0" prefWidth="388.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <children>
                         <Button mnemonicParsing="false" onAction="#backToHome" text="Back">
                            <font>
@@ -69,26 +82,13 @@
                         </Button>
                      </children>
                   </HBox>
-                  <TextField fx:id="year" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="location" alignment="CENTER" promptText="type the shell number/name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextArea fx:id="synopsis" prefHeight="122.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <HBox alignment="CENTER" minHeight="100.0" minWidth="200.0" GridPane.columnIndex="1">
-                     <children>
-                        <TextField fx:id="name" alignment="CENTER" promptText="type a movie title" />
-                        <Button mnemonicParsing="false" onAction="#searchMovie" text="Search Movie">
-                           <font>
-                              <Font name="Baskerville Old Face" size="14.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
                </children>
             </GridPane>
          </children>
       </HBox>
       <HBox fx:id="buttonBox" alignment="BOTTOM_CENTER" minHeight="60.0" minWidth="788.0">
          <children>
-            <ImageView fx:id="bottonImage" fitHeight="60.0" fitWidth="788.0" pickOnBounds="true">
+            <ImageView fx:id="bottonImage" fitHeight="60.0" fitWidth="826.0" pickOnBounds="true">
                <image>
                   <Image url="@../images/BottomPage.jpg" />
                </image>
